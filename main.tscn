@@ -1,23 +1,47 @@
-[gd_scene format=3 uid="uid://dpkppvygq3u6m"]
+[gd_scene load_steps=3 format=3 uid="uid://dpkppvygq3u6m"]
 
-[node name="main" type="Node2D"]
+[ext_resource type="Script" path="res://main.gd" id="1_omafc"]
+[ext_resource type="Script" path="res://Add Rule.gd" id="2_g2vkc"]
 
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="main" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = 1151.0
-offset_bottom = 647.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_omafc")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="Rules" type="TextEdit" parent="TabContainer"]
+[node name="Rules" type="Control" parent="TabContainer"]
 layout_mode = 2
-placeholder_text = "This is the rules..."
 
-[node name="Run" type="TextEdit" parent="TabContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Rules"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Add Rule" type="Button" parent="TabContainer/Rules/VBoxContainer"]
+layout_mode = 2
+text = "Add rule"
+script = ExtResource("2_g2vkc")
+
+[node name="Rules" type="Control" parent="TabContainer/Rules/VBoxContainer"]
+layout_mode = 2
+
+[node name="Run" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
-placeholder_text = "This runs game..."
+
+[connection signal="pressed" from="TabContainer/Rules/VBoxContainer/Add Rule" to="TabContainer/Rules/VBoxContainer/Add Rule" method="_on_pressed"]

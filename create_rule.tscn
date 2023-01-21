@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl50daddyictq"]
+
+[ext_resource type="Script" path="res://rule.gd" id="1_e8bek"]
+
+[node name="Rule" type="ConfirmationDialog"]
+initial_position = 1
+size = Vector2i(346, 193)
+current_screen = -2
+visible = true
+script = ExtResource("1_e8bek")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 338.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "TOP LEFT"
+
+[node name="Button1" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "TOP"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "TOP RIGHT"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "CENTER LEFT"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "CENTER"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "CENTER RIGHT"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "BOTTOM LEFT"
+
+[node name="Button7" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "BOTTOM"
+
+[node name="Button8" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "BOTTOM RIGHT"
