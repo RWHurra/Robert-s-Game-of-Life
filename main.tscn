@@ -2,25 +2,22 @@
 
 [node name="main" type="Node2D"]
 
-[node name="TabBar" type="TabBar" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1151.0
+offset_bottom = 647.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
 
-[node name="TabContainer" type="TabContainer" parent="TabBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Rules" type="TextEdit" parent="TabContainer"]
+layout_mode = 2
+placeholder_text = "This is the rules..."
 
-[node name="TabContainer2" type="TabContainer" parent="TabBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Run" type="TextEdit" parent="TabContainer"]
+visible = false
+layout_mode = 2
+placeholder_text = "This runs game..."
