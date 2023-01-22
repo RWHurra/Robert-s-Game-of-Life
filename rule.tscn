@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://c5ntw0bq10nkn"]
 
-[node name="rule" type="Node2D"]
+[node name="rule" type="Control"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 3
+anchors_preset = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
 offset_right = 52.0
 offset_bottom = 38.0
 

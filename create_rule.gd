@@ -26,3 +26,4 @@ func _on_confirmed():
 	rule_instance.show()
 	print("Rule created: ", rule_instance)
 	print("Rules container children: ", rules_container.get_children())
+	queue_free()
