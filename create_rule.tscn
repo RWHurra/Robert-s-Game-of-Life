@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl50daddyictq"]
+[gd_scene load_steps=2 format=3 uid="uid://l52nsiancjdg"]
 
-[ext_resource type="Script" path="res://rule.gd" id="1_e8bek"]
+[ext_resource type="Script" path="res://create_rule.gd" id="1_tulrl"]
 
-[node name="Rule" type="ConfirmationDialog"]
+[node name="Create Rule Dialog" type="ConfirmationDialog"]
 initial_position = 1
+title = "Setup rule"
 size = Vector2i(346, 193)
 current_screen = -2
 visible = true
-script = ExtResource("1_e8bek")
+script = ExtResource("1_tulrl")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 offset_left = 8.0
@@ -57,3 +58,5 @@ text = "BOTTOM"
 [node name="Button8" type="Button" parent="GridContainer"]
 layout_mode = 2
 text = "BOTTOM RIGHT"
+
+[connection signal="confirmed" from="." to="." method="_on_confirmed"]

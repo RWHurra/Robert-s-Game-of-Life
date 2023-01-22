@@ -16,5 +16,5 @@ func _process(delta):
 func _on_pressed():
 	var create_rule_dialog_instance = create_rule_dialog_scene.instantiate()
 	add_child(create_rule_dialog_instance)
-	create_rule_dialog_instance.position = Vector2(50, 50)
+	create_rule_dialog_instance.position = get_viewport_rect().size / 2
 	create_rule_dialog_instance.show()

@@ -37,8 +37,11 @@ layout_mode = 2
 text = "Add rule"
 script = ExtResource("2_g2vkc")
 
-[node name="Rules" type="Control" parent="TabContainer/Rules/VBoxContainer"]
+[node name="Rules Container" type="GridContainer" parent="TabContainer/Rules/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
 
 [node name="Run" type="Control" parent="TabContainer"]
 visible = false
